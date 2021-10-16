@@ -4,177 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Lesson-3</title>
+    <title>Advantages Section</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Моя первая страница</h1>
-<p><a href="./about/index.html">Об авторе</a></p>
-<hr>
-<p>
-    &#9658; <strong>Во первых:</strong> мне захотелось в корне поменять свою надоевшую работу.<br>
-    <strong>Во вторых:</strong> мне это очень интересно, я люблю &#10084; создавать внешнюю,визуальную составляющую
-    интерфейсов.<br>
-    Ни для кого не секрет, что <strong>в третьих:</strong> в этой профессии можно хорошо зарабатывать &#8364;.
-</p>
-<p>
-    &#9658; Я <del>ленивая</del> творческая &#128514; личность, люблю учиться и познавать новое (новые знания для меня как H<sub>2</sub>O),
-    креативный, добрый, вежливый, слишком строг к себе.<br>
-    Не люблю математику, но знаю сколько будет 5<sup>2</sup>.<br>
-    Не собираюсь останавливаться &#128721; в своих целях! Как говорит мой друг:
-</p>
-<blockquote>"Взял мяч &#127952; - *уяч!"</blockquote>
-<img src="./img/horse.png" alt="horse" width="350">
-<ol>
-    <li>Знакомство с Web
-        <ul>
-            <li>Краткая история Web и что такое интернет.</li>
-            <li>Как устроен браузер и как он получает страницы по сети.</li>
-            <li>Что такое Git?</li>
-            <li>Создание первого репозитория.</li>
-            <li>О файле .gitignore</li>
-        </ul>
-    </li>
-    <li>HTML-вёрстка - пепрвые шаги
-        <ul>
-            <li>Настройка рабочей среды.</li>
-            <li>Краткая история HTML.</li>
-            <li>Какие бывают теги и что такое атрибут.</li>
-            <li>Теги для работы с текстом</li>
-            <li>Создание собственной страницы.</li>
-        </ul>
-    </li>
-    <li>Погружение в HTML-разметку
-        <ul>
-            <li>Мета-теги.</li>
-            <li>Мнемоники.</li>
-            <li>Тег для работы с изображениями.</li>
-            <li>Теги для работы со списками.</li>
-            <li>Теги для работы с таблицами.</li>
-            <li>Теги для работы с формами.</li>
-            <li>Div-блоки</li>
-        </ul>
-    </li>
-</ol>
-<table border="1">
-    <thead>
-        <tr>
-            <th>Tag</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>&lt;table&gt;</td>
-            <td>Defines a table</td>
-        </tr>
-        <tr>
-            <td>&lt;tr&gt;</td>
-            <td>Defines a row in a table</td>
-        </tr>
-        <tr>
-            <td>&lt;th&gt;</td>
-            <td rowspan="2">Defines a "header cell" / "cell" in a table</td>
-        </tr>
-        <tr>
-            <td>&lt;th&gt;</td>
-        </tr>
-        <tr>
-            <td colspan="2">Rarely used</td>
-        </tr>
-        <tr>
-            <td>&lt;caption&gt;</td>
-            <td>Defines a table caption</td>
-        </tr>
-        <tr>
-            <td>&lt;thead&gt;</td>
-            <td>Groups the header content in a table</td>
-        </tr>
-        <tr>
-            <td>&lt;tbody&gt;</td>
-            <td>Groups the body content in a table</td>
-        </tr>
-        <tr>
-            <td>&lt;tfoot&gt;</td>
-            <td>Groups the footer content in a table</td>
-        </tr>
-    </tbody>
-</table>
-<p></p>
-<form action="/" method="get">
-    <fieldset>
-        <legend>My first form</legend>
-        <div>
-            <label for="name">Name <br>
-                <input name="name" id="name" type="text" placeholder="Name" required >
-            </label>
-        </div>
-        <div>
-            <label for="email">Email <br>
-                <input name="email" id="email" type="email" required>
-            </label>
-        </div>
-        <div>
-            <label for="password">Password <br>
-                <input name="password" id="password" type="password" required>
-            </label>
-        </div>
-        <div>
-            <label for="range">Your programming level <br>
-                <input name="range" id="range" type="range" min="1" max="10">
-            </label>
-        </div>
-        <div>
-            <p>What does HTML stand for?</p>
-            <div>
-                <div>
-                    <input name="first-checkbox" id="first-checkbox" type="checkbox">
-                    <label for="first-checkbox">Hyperlinks and Text Markup Language</label>
+    <section class="advantages">
+        <div class="_bounding-container">
+            <div class="advantages__header">
+                <h2 class="advantages__title">What do we offer</h2>
+                <div class="advantages__orange-line"></div>
+            </div>
+            <div class="advantages__body">
+                <div class="advantages__column">
+                    <img src="./img/headphones.png" alt="headphones">
+                    <p class="advantages__column-text">Support 24/7</p>
                 </div>
-                <div>
-                    <input name="middle-checkbox" id="middle-checkbox" type="checkbox">
-                    <label for="middle-checkbox">Home Tool Markup Language</label>
+                <div class="advantages__column">
+                    <img src="./img/message.png" alt="message">
+                    <p class="advantages__column-text">Communicate directly</p>
                 </div>
-                <div>
-                    <input name="last-checkbox" id="last-checkbox" type="checkbox">
-                    <label for="last-checkbox">Hyper Text Markup Language</label>
+                <div class="advantages__column">
+                    <img src="./img/library.png" alt="library">
+                    <p class="advantages__column-text">Book online</p>
+                </div>
+                <div class="advantages__column">
+                    <img src="./img/thumb_up.png" alt="thumb up">
+                    <p class="advantages__column-text">Real guest reviews</p>
                 </div>
             </div>
         </div>
-        <div>
-            <p>What does HTTP stand for?</p>
-            <div>
-                <input name="first-radio" id="first-radio" type="radio" value="Hyper Text Translate Protocol">
-                <label for="first-radio">Hyper Text Translate Protocol</label>
-            </div>
-            <div>
-                <input name="middle-radio" id="middle-radio" type="radio" value="Hyper Text Transmission Protocol">
-                <label for="middle-radio">Hyper Text Transmission Protocol</label>
-            </div>
-            <div>
-                <input name="last-radio" id="last-radio" type="radio" value="Hyper Text Transmission Protocol">
-                <label for="last-radio">Hyper Text Transfer Protocol</label>
-            </div>
-        </div>
-        <div>
-            <label for="comment">Comment</label>
-            <div>
-                <textarea name="comment" placeholder="Comment" id="comment" maxlength="500"></textarea>
-            </div>
-        </div>
-        <div>
-            <label for="select">What does HTML stand for?</label>
-            <div>
-                <select name="select_html" id="select">
-                    <option value="0" hidden>Your answer</option>
-                    <option value="1">I don't know(</option>
-                    <option value="2">I know, but I won't tell)</option>
-                </select>
-            </div>
-        </div>
-        <p></p>
-        <button type="submit">Send</button>
-    </fieldset>
-</form>
+    </section>
 </body>
 </html>
 
