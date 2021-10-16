@@ -13,7 +13,7 @@
 }
 
 ._bounding-container {
-    padding: 0 104px;
+    padding: 0 105px;
 }
 
 h2 {
@@ -46,23 +46,15 @@ h2 {
 
 .advantages__body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .advantages__column {
-    width: 25%;
     text-align: center;
 }
 
-.advantages__column:not(:last-child) {
-    margin: 0 16px 0 0;
-}
-
-.item-advantages__icon {
-    margin: 0 0 48px 0;
-}
-
-.item-advantages__text {
+.advantages__column-text {
     font-size: 24px;
     line-height: 28px;
+    margin: 50px 0 0 0;
 }
