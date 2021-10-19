@@ -46,14 +46,14 @@ h2 {
 
 .advantages__body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .advantages__column {
     text-align: center;
 }
 
-.advantages__column-text {
+.advantages__text {
     font-size: 24px;
     line-height: 28px;
     margin: 50px 0 0 0;
