@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border:none;
 }
 
 /*------ main settings ------------*/
@@ -20,6 +21,26 @@ h2 {
     font-weight: 500;
     font-size: 40px;
     line-height: 47px;
+}
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #F3F3F4;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px #0000003F;
+}
+
+/*------ modifiers --------*/
+
+.-blue-text {
+    color: #3077C6;
+}
+
+.-gray-text {
+    color: #BFBFBF;
 }
 
 /*------ advantages-section --------*/
@@ -46,7 +67,8 @@ h2 {
 
 .advantages__body {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 100px;
 }
 
 .advantages__column {
@@ -58,3 +80,42 @@ h2 {
     line-height: 28px;
     margin: 50px 0 0 0;
 }
+
+/*------ homes-section --------*/
+
+.homes {
+    padding: 120px 0;
+    background-color: #EAF0F9;
+}
+
+.homes__title {
+    text-align: center;
+    margin: 0 0 105px 0;
+}
+
+.homes__body {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.homes__column {
+    max-width: 296px;
+}
+/* Задал ширину, потому-что в макете картинки немного разного размера */
+.homes__column > img {
+    width: 296px;
+}
+
+.homes__text {
+    margin: 25px 0 0 0;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.home-slider {
+    position: absolute;
+    top: 125px;
+    right: -20px;
+}
+
