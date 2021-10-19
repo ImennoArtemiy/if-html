@@ -46,7 +46,7 @@ h2 {
 
 .advantages__body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .advantages__column {
