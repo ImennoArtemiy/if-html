@@ -56,6 +56,16 @@ h2 {
     color: #BFBFBF;
 }
 
+.-blackout {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /*------ advantages-section --------*/
 
 .advantages {
@@ -113,13 +123,13 @@ h2 {
 }
 
 .homes__column {
-    max-width: 296px;
+    max-width: 295px;
 }
-/* Задал ширину, потому-что в макете картинки немного разного размера */
+
 .homes__column > img {
     display: block;
-    width: 296px;
-    height: 296px;
+    max-width: 295px;
+    max-height: 295px;
 }
 
 .homes__text {
@@ -174,18 +184,8 @@ h2 {
 
 .destinations__column img {
     display: block;
-    width: 296px;
-    height: 296px;
-}
-
-.-blackout {
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.5);
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 295px;
+    max-height: 295px;
 }
 
 .reservation-button {
