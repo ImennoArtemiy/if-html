@@ -19,7 +19,10 @@ button {
 }
 
 ._bounding-container {
-    padding: 0 105px;
+    max-width: 1232px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: content-box;
 }
 
 ._image-container {
@@ -90,18 +93,22 @@ h2 {
 
 .advantages__body {
     display: flex;
-    justify-content: space-between;
-    padding: 0 100px;
+    justify-content: center;
 }
 
 .advantages__column {
     text-align: center;
+    width: 25%;
+}
+
+.advantages__column:not(:last-child) {
+    margin: 0 16px 0 0;
 }
 
 .advantages__text {
     font-size: 24px;
     line-height: 28px;
-    margin: 50px 0 0 0;
+    margin: 44px 0 0 0;
 }
 
 /*------ homes-section --------*/
@@ -113,35 +120,39 @@ h2 {
 
 .homes__title {
     text-align: center;
-    margin: 0 0 105px 0;
+    margin: 0 0 106px 0;
 }
 
 .homes__body {
     display: flex;
-    justify-content: space-between;
     position: relative;
 }
 
 .homes__column {
-    max-width: 295px;
+    width: 25%;
+    margin: 0 16px 0 0;
+}
+
+.homes__column:nth-child(4) {
+    margin: 0;
 }
 
 .homes__column > img {
     display: block;
-    max-width: 295px;
-    max-height: 295px;
+    width: 100%;
 }
 
 .homes__text {
-    margin: 25px 0 0 0;
+    margin: 24px 0 0 0;
     font-size: 24px;
     line-height: 28px;
 }
 
 .home-slider {
     position: absolute;
-    top: 125px;
-    right: -20px;
+    top: 30%;
+    left: 100%;
+    transform: translate(-50%, 0%);
     box-shadow: 0 4px 4px #0000003F;
 }
 
@@ -153,22 +164,27 @@ h2 {
 
 .destinations__title {
     text-align: center;
-    margin: 0 0 105px 0;
+    margin: 0 0 104px 0;
 }
 
 .destinations__buttons {
     background-color: #F3F3F4;
     display: inline-block;
     border-radius: 8px;
-    margin: 0 0 65px 0;
+    margin: 0 0 64px 0;
 }
 
 .destinations__button {
+    min-width: 192px;
     font-size: 24px;
     line-height: 28px;
-    padding: 15px 30px;
+    padding: 17px 52px;
     border-radius: 8px;
     float: left;
+}
+
+.destinations__button:last-child {
+    padding: 17px 25px;
 }
 
 .destinations__button:nth-child(1) {
@@ -178,23 +194,30 @@ h2 {
 
 .destinations__body {
     display: flex;
-    justify-content: space-between;
-    margin: 0 0 50px 0;
+    margin: 0 0 48px 0;
+}
+
+.destinations__column {
+    width: 25%;
+}
+
+.destinations__column:not(:last-child) {
+    margin: 0 16px 0 0;
 }
 
 .destinations__column img {
     display: block;
-    max-width: 295px;
-    max-height: 295px;
+    width: 100%;
 }
 
 .reservation-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -7% 0 0 -22%;
-    padding: 15px 25px;
+    transform: translate(-50%, -50%);
+    padding: 13px 24px;
     background-color: #FFFFFF;
+    border: 1px solid #3077C6;
     border-radius: 8px;
     font-size: 18px;
     z-index: 2;
@@ -202,7 +225,7 @@ h2 {
 
 .destinations__text {
     font-size: 24px;
-    margin: 25px 0 0 0;
+    margin: 24px 0 0 0;
 }
 
 .destinations-slider {
