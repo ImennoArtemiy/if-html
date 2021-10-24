@@ -1,3 +1,10 @@
+@import "fonts.css";
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
 /*------ reset styles -------------*/
 
 * {
@@ -7,16 +14,16 @@
     border:none;
 }
 
+li {
+    list-style: none;
+}
+
 button {
     background-color: transparent;
     cursor: pointer;
 }
 
 /*------ main settings ------------*/
-
-* {
-    font-family: 'Roboto', sans-serif;
-}
 
 ._bounding-container {
     max-width: 1232px;
@@ -50,6 +57,10 @@ h2 {
 }
 
 /*------ modifiers --------*/
+
+.-bold-text {
+    font-weight: 500;
+}
 
 .-blue-text {
     color: #3077C6;
@@ -233,6 +244,39 @@ h2 {
     box-shadow: 4px 0 4px #0000003F;
 }
 
+/*------ footer --------*/
 
+.footer {
+    padding: 120px 0;
+    background-color: #10367C;
+}
+
+.footer__body {
+    display: flex;
+    margin: 0 0 64px 0;
+}
+
+.footer__column {
+    width: 33.3%;
+}
+
+.footer__column:not(:last-child) {
+    margin: 0 16px 0 0;
+}
+
+.footer__column a {
+    color:#FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer__column li:not(:last-child) {
+    margin: 0 0 24px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 14px;
+}
 
 
