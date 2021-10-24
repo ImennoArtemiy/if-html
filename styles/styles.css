@@ -202,6 +202,7 @@ h2 {
     padding: 17px 52px;
     border-radius: 8px;
     float: left;
+    transition: .5s ease;
 }
 
 .destinations__button:not(:first-child):hover {
@@ -256,6 +257,12 @@ h2 {
     border: 1px solid #3077C6;
     border-radius: 8px;
     font-size: 18px;
+    transition: .5s ease;
+}
+
+.reservation-button:hover {
+    background-color: #3077C6;
+    color: #FFFFFF;
 }
 
 .destinations__text {
