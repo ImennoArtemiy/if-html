@@ -263,6 +263,7 @@ h2 {
 .reservation-button:hover {
     background-color: #3077C6;
     color: #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 .destinations__text {
