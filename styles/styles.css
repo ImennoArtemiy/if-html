@@ -1,3 +1,10 @@
+@import "fonts.css";
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
 /*------ reset styles -------------*/
 
 * {
@@ -7,16 +14,16 @@
     border:none;
 }
 
+li {
+    list-style: none;
+}
+
 button {
     background-color: transparent;
     cursor: pointer;
 }
 
 /*------ main settings ------------*/
-
-* {
-    font-family: 'Roboto', sans-serif;
-}
 
 ._bounding-container {
     max-width: 1232px;
@@ -47,9 +54,18 @@ h2 {
     height: 40px;
     background-color: #F3F3F4;
     border-radius: 50%;
+    transition: .5s ease;
+}
+
+.slider:hover {
+    background-color: #e0e0e5;
 }
 
 /*------ modifiers --------*/
+
+.-bold-text {
+    font-weight: 500;
+}
 
 .-blue-text {
     color: #3077C6;
@@ -63,10 +79,15 @@ h2 {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.5);
-    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.-blackout:hover {
+    opacity: 1;
 }
 
 /*------ advantages-section --------*/
@@ -77,11 +98,11 @@ h2 {
 
 .advantages__header {
    text-align: center;
-   margin: 0 0 80px 0;
+    margin-bottom: 80px;
 }
 
 .advantages__title {
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
 }
 
 .advantages__orange-line {
@@ -102,13 +123,13 @@ h2 {
 }
 
 .advantages__column:not(:last-child) {
-    margin: 0 16px 0 0;
+    margin-right: 16px;
 }
 
 .advantages__text {
     font-size: 24px;
     line-height: 28px;
-    margin: 44px 0 0 0;
+    margin-top: 44px;
 }
 
 /*------ homes-section --------*/
@@ -120,7 +141,7 @@ h2 {
 
 .homes__title {
     text-align: center;
-    margin: 0 0 106px 0;
+    margin-bottom: 106px;
 }
 
 .homes__body {
@@ -130,7 +151,7 @@ h2 {
 
 .homes__column {
     width: 25%;
-    margin: 0 16px 0 0;
+    margin-right: 16px;
 }
 
 .homes__column:nth-child(4) {
@@ -143,7 +164,7 @@ h2 {
 }
 
 .homes__text {
-    margin: 24px 0 0 0;
+    margin-top: 24px;
     font-size: 24px;
     line-height: 28px;
 }
@@ -164,14 +185,14 @@ h2 {
 
 .destinations__title {
     text-align: center;
-    margin: 0 0 104px 0;
+    margin-bottom: 104px;
 }
 
 .destinations__buttons {
     background-color: #F3F3F4;
     display: inline-block;
     border-radius: 8px;
-    margin: 0 0 64px 0;
+    margin-bottom: 64px;
 }
 
 .destinations__button {
@@ -181,20 +202,29 @@ h2 {
     padding: 17px 52px;
     border-radius: 8px;
     float: left;
+    transition: .5s ease;
+}
+
+.destinations__button:not(:first-child):hover {
+    background-color: #e0e0e5;
 }
 
 .destinations__button:last-child {
     padding: 17px 25px;
 }
 
-.destinations__button:nth-child(1) {
+.destinations__button:first-child {
     background-color: #3077C6;
     color: #FFFFFF;
 }
 
+.destinations__button:first-child:hover {
+    background-color: #1a5ca6;
+}
+
 .destinations__body {
     display: flex;
-    margin: 0 0 48px 0;
+    margin-bottom: 48px;
 }
 
 .destinations__column {
@@ -202,12 +232,19 @@ h2 {
 }
 
 .destinations__column:not(:last-child) {
-    margin: 0 16px 0 0;
+    margin-right: 16px;
 }
 
 .destinations__column img {
     display: block;
     width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.destinations__column img:hover {
+    opacity: 0.3;
 }
 
 .reservation-button {
@@ -220,12 +257,18 @@ h2 {
     border: 1px solid #3077C6;
     border-radius: 8px;
     font-size: 18px;
-    z-index: 2;
+    transition: .5s ease;
+}
+
+.reservation-button:hover {
+    background-color: #3077C6;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 .destinations__text {
     font-size: 24px;
-    margin: 24px 0 0 0;
+    margin-top: 24px;
 }
 
 .destinations-slider {
@@ -233,6 +276,37 @@ h2 {
     box-shadow: 4px 0 4px #0000003F;
 }
 
+/*------ footer --------*/
 
+.footer {
+    padding: 120px 0;
+    background-color: #10367C;
+}
 
+.footer__body {
+    display: flex;
+    margin-bottom: 64px;
+}
 
+.footer__column {
+    width: 33.3%;
+}
+
+.footer__column:not(:last-child) {
+    margin-right: 16px;
+}
+
+.footer__column a {
+    color:#FFFFFF;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer__column li:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 14px;
+}
