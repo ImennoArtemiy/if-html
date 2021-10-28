@@ -23,6 +23,8 @@ button {
     cursor: pointer;
 }
 
+input:focus {outline: 0;}
+
 /*------ main settings ------------*/
 
 ._bounding-container {
@@ -88,6 +90,167 @@ h2 {
 
 .-blackout:hover {
     opacity: 1;
+}
+
+/*------ header --------*/
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: url("../img/top/castelmezzano.png") center no-repeat;
+    background-size: cover;
+    padding-top: 51px;
+    padding-bottom: 120px;
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 196px;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.menu__text {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.menu__text a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 24px;
+}
+
+.menu__link {
+    position: relative;
+}
+
+.menu__link:after {
+    display: none;
+    position: absolute;
+    left: 8%;
+    bottom: -32%;
+    content: '';
+    width: 85%;
+    height: 4px;
+    background-color: #F5BD41;
+}
+
+.menu__link:hover:after {
+    display: block;
+}
+
+.menu__icons {
+    display: flex;
+    align-items: center;
+}
+
+.menu__icons a {
+    margin-left: 24px;
+}
+
+/*------ top --------*/
+
+.top__title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 59px;
+    color: #FFFFFF;
+    margin-bottom: 145px;
+}
+
+.top__form {
+    position: relative;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 120px;
+}
+
+.city-field {
+    max-height: 64px;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 3px solid #F3F3F4;;
+    border-radius: 8px;
+}
+
+.city-label {
+    position: absolute;
+    top: -82%;
+    left: 1.6%;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.city-input {
+    padding: 19px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    max-height: 64px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.calendar:before {
+    content: 'Check-in — Check-out';
+    color: #FFFFFF;
+    position: absolute;
+    top: -70%;
+    left: 3.5%;
+}
+
+.calendar, .adults {
+    color: #383838;
+    padding: 21px 24px;
+    border: 3px solid rgba(245, 189, 65, 0);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.calendar:hover, .adults:hover {
+    border: 3px solid rgba(245, 189, 65, 100);
+}
+
+.search-button {
+    padding: 21px 57px;
+    background-color: #3077C6;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-size: 24px;
+    line-height: 28px;
+    transition: .5s ease;
+}
+
+.search-button:hover {
+    background-color: #1a5ca6;
+}
+
+.top__apps {
+    width: 271px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.top__apps a {
+    display: block;
+    float: left;
+}
+
+.top__apps a:not(:last-child) {
+    margin-right: 16px;
 }
 
 /*------ advantages-section --------*/
