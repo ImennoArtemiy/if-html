@@ -9,43 +9,57 @@
 </head>
 <body>
     <header class="header">
-        <div class="_bounding-container header-top">
-            <div class="header__body">
-                <div class="header__logo">
-                    <a href="#">
-                        <img src="./img/header/triphouse-logo.png" alt="TripHouse logo">
+        <div class="header__blackout-container">
+            <div class="header-top__container">
+                <div class="header__body">
+                    <div class="header__logo">
+                        <a href="#">
+                            <svg class="triphouse-logo">
+                                <use href="./img/sprite.svg#triphouse-logo"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="header__menu menu">
+                        <div class="menu__text">
+                            <a href="#" class="menu__link">Stays</a>
+                            <a href="#" class="menu__link">Attractions</a>
+                        </div>
+                        <div class="menu__icons">
+                            <a href="#">
+                                <svg class="theme-icon">
+                                    <use href="./img/sprite.svg#theme-icon"></use>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg class="account-icon">
+                                    <use href="./img/sprite.svg#account-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <h1 class="top__title">Discover stays <br> to live, work or just relax</h1>
+                <form action="" class="top__form">
+                    <div class="city-field">
+                        <input id="city-input" class="city-input" type="text" required>
+                        <label class="city-label" for="city-input">Your destination or hotel name</label>
+                    </div>
+                    <div class="button-container">
+                        <div class="calendar" tabindex="0">
+                            <p class="calendar-label">Check-in — Check-out</p>
+                        </div>
+                        <div class="adults" tabindex="0">2 Adults — 0 Children — 1 Room</div>
+                        <button type="submit" class="search-button">Search</button>
+                    </div>
+                </form>
+                <div class="top__apps">
+                    <a href="https://play.google.com" target="_blank">
+                        <img src="./img/top/google-play.png" alt="Google Play">
+                    </a>
+                    <a href="https://www.apple.com/app-store" target="_blank">
+                        <img src="./img/top/app-store.png" alt="App Store">
                     </a>
                 </div>
-                <nav class="header__menu menu">
-                    <div class="menu__text">
-                        <a href="#" class="menu__link">Stays</a>
-                        <a href="#" class="menu__link">Attractions</a>
-                    </div>
-                    <div class="menu__icons">
-                        <a href="#"><img src="./img/header/theme.png" alt="Theme icon"></a>
-                        <a href="#"><img src="./img/header/account.png" alt="Account icon"></a>
-                    </div>
-                </nav>
-            </div>
-            <h1 class="top__title">Discover stays <br> to live, work or just relax</h1>
-            <form action="" class="top__form">
-                <div class="city-field">
-                    <label class="city-label" for="city-input">Your destination or hotel name</label>
-                    <input id="city-input" class="city-input" type="text">
-                </div>
-                <div class="button-container">
-                    <p class="calendar">Tue 15 Sept — Sat 19 Sept</p>
-                    <p class="adults">2 Adults — 0 Children — 1 Room</p>
-                    <button type="submit" class="search-button">Search</button>
-                </div>
-            </form>
-            <div class="top__apps">
-                <a href="https://play.google.com" target="_blank">
-                    <img src="./img/top/google-play.png" alt="Google Play">
-                </a>
-                <a href="https://www.apple.com/app-store" target="_blank">
-                    <img src="./img/top/app-store.png" alt="App Store">
-                </a>
             </div>
         </div>
     </header>
@@ -58,19 +72,27 @@
                 </div>
                 <div class="advantages__body">
                     <div class="advantages__column">
-                        <img src="img/advantages/headphones.png" alt="headphones">
+                        <svg class="advantages__icon">
+                            <use href="./img/sprite.svg#headphones-icon"></use>
+                        </svg>
                         <p class="advantages__text">Support 24/7</p>
                     </div>
                     <div class="advantages__column">
-                        <img src="img/advantages/message.png" alt="message">
+                        <svg class="advantages__icon">
+                            <use href="./img/sprite.svg#message-icon"></use>
+                        </svg>
                         <p class="advantages__text">Communicate directly</p>
                     </div>
                     <div class="advantages__column">
-                        <img src="img/advantages/library.png" alt="library">
+                        <svg class="advantages__icon">
+                            <use href="./img/sprite.svg#library-icon"></use>
+                        </svg>
                         <p class="advantages__text">Book online</p>
                     </div>
                     <div class="advantages__column">
-                        <img src="img/advantages/thumb_up.png" alt="thumb up">
+                        <svg class="advantages__icon">
+                            <use href="./img/sprite.svg#thumb-up-icon"></use>
+                        </svg>
                         <p class="advantages__text">Real guest reviews</p>
                     </div>
                 </div>
@@ -101,7 +123,9 @@
                         <p class="homes__text -gray-text">Berlin, Germany</p>
                     </div>
                     <button class="home-slider slider">
-                        <img src="./img/arrow.png" alt="arrow">
+                        <svg class="arrow-icon">
+                            <use href="./img/sprite.svg#arrow-icon"></use>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -154,7 +178,9 @@
                 </div>
                 <div class="_slider-container">
                     <button class="destinations-slider slider">
-                        <img src="./img/arrow.png" alt="arrow">
+                        <svg class="arrow-icon">
+                            <use href="./img/sprite.svg#arrow-icon"></use>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -162,6 +188,11 @@
     </main>
     <footer class="footer">
         <div class="_bounding-container">
+            <a href="#">
+                <svg class="footer__triphouse-logo">
+                    <use href="./img/sprite.svg#triphouse-logo"></use>
+                </svg>
+            </a>
             <div class="footer__body">
                 <ul class="footer__column">
                     <li><a href="#" class="-bold-text">About</a></li>

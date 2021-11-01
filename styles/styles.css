@@ -13,16 +13,13 @@ html, body {
     padding: 0;
     border:none;
 }
-
 li {
     list-style: none;
 }
-
 button {
     background-color: transparent;
     cursor: pointer;
 }
-
 input:focus {outline: 0;}
 
 /*------ main settings ------------*/
@@ -30,19 +27,16 @@ input:focus {outline: 0;}
 ._bounding-container {
     max-width: 1232px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 120px 16px;
     box-sizing: content-box;
 }
-
 ._image-container {
     position: relative;
 }
-
 ._slider-container {
     display: flex;
     justify-content: center;
 }
-
 h2 {
     font-weight: 500;
     font-size: 40px;
@@ -58,7 +52,6 @@ h2 {
     border-radius: 50%;
     transition: .5s ease;
 }
-
 .slider:hover {
     background-color: #e0e0e5;
 }
@@ -68,15 +61,12 @@ h2 {
 .-bold-text {
     font-weight: 500;
 }
-
 .-blue-text {
     color: #3077C6;
 }
-
 .-gray-text {
     color: #BFBFBF;
 }
-
 .-blackout {
     width: 100%;
     height: 100%;
@@ -87,49 +77,54 @@ h2 {
     transition: .5s ease;
     opacity: 0;
 }
-
 .-blackout:hover {
     opacity: 1;
 }
 
-/*------ header --------*/
+/*---------------*/
 
 .header {
     min-height: 100vh;
     width: 100%;
-    background: url("../img/top/castelmezzano.png") center no-repeat;
+    background: url("../img/top/castelmezzano.png") no-repeat;
     background-size: cover;
-    padding-top: 51px;
-    padding-bottom: 120px;
 }
-
+.header__blackout-container {
+    background: rgba(18, 18, 18, 0.25);
+}
+.header-top__container {
+    max-width: 1232px;
+    margin: 0 auto;
+    padding: 51px 16px 120px;
+    box-sizing: content-box;
+}
 .header__body {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 196px;
+    margin-bottom: 200px;
 }
-
+.triphouse-logo {
+    fill: #3077C6;
+    width: 205px;
+    height: 40px;
+}
 .header__menu {
     display: flex;
 }
-
 .menu__text {
     display: flex;
     align-items: center;
     font-size: 24px;
     line-height: 28px;
 }
-
 .menu__text a {
     color: #FFFFFF;
     text-decoration: none;
     margin-right: 24px;
 }
-
 .menu__link {
     position: relative;
 }
-
 .menu__link:after {
     display: none;
     position: absolute;
@@ -140,21 +135,27 @@ h2 {
     height: 4px;
     background-color: #F5BD41;
 }
-
 .menu__link:hover:after {
     display: block;
 }
-
 .menu__icons {
     display: flex;
     align-items: center;
 }
-
 .menu__icons a {
     margin-left: 24px;
 }
+.theme-icon {
+    fill: #FFFFFF;
+    width: 30px;
+    height: 30px;
+}
+.account-icon {
+    fill: #FFFFFF;
+    width: 40px;
+    height: 40px;
+}
 
-/*------ top --------*/
 
 .top__title {
     font-size: 50px;
@@ -163,7 +164,6 @@ h2 {
     color: #FFFFFF;
     margin-bottom: 145px;
 }
-
 .top__form {
     position: relative;
     border-radius: 8px;
@@ -171,30 +171,38 @@ h2 {
     line-height: 21px;
     margin-bottom: 120px;
 }
-
 .city-field {
     max-height: 64px;
     position: relative;
     background-color: #FFFFFF;
     border: 3px solid #F3F3F4;;
     border-radius: 8px;
+    height: 64px;
 }
-
 .city-label {
     position: absolute;
-    top: -82%;
-    left: 1.6%;
+    bottom: 50%;
+    left: 2%;
+    transform: translate(0, 50%);
     font-size: 18px;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #383838;
+    transition: .5s ease;
 }
 
+.city-input:focus + .city-label,
+.city-input:valid +.city-label {
+    position: absolute;
+    top: -85%;
+    left: 2%;
+    transform: none;
+    color: #FFFFFF;
+}
 .city-input {
     padding: 19px 24px;
     border-radius: 8px;
     font-size: 18px;
 }
-
 .button-container {
     display: flex;
     justify-content: flex-end;
@@ -203,15 +211,6 @@ h2 {
     top: 0;
     right: 0;
 }
-
-.calendar:before {
-    content: 'Check-in — Check-out';
-    color: #FFFFFF;
-    position: absolute;
-    top: -70%;
-    left: 3.5%;
-}
-
 .calendar, .adults {
     color: #383838;
     padding: 21px 24px;
@@ -219,11 +218,12 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
 }
-
 .calendar:hover, .adults:hover {
+    border: 3px solid #dedee1;
+}
+.calendar:focus, .adults:focus {
     border: 3px solid rgba(245, 189, 65, 100);
 }
-
 .search-button {
     padding: 21px 57px;
     background-color: #3077C6;
@@ -233,105 +233,84 @@ h2 {
     line-height: 28px;
     transition: .5s ease;
 }
-
 .search-button:hover {
     background-color: #1a5ca6;
 }
-
 .top__apps {
     width: 271px;
     height: 40px;
     margin: 0 auto;
 }
-
 .top__apps a {
     display: block;
     float: left;
 }
-
 .top__apps a:not(:last-child) {
     margin-right: 16px;
-}
-
-/*------ advantages-section --------*/
-
-.advantages {
-    padding: 120px 0;
 }
 
 .advantages__header {
    text-align: center;
     margin-bottom: 80px;
 }
-
 .advantages__title {
     margin-bottom: 20px;
 }
-
 .advantages__orange-line {
     width: 100px;
     height: 4px;
     margin: 0 auto;
     background-color:#F5BD41;
 }
-
 .advantages__body {
     display: flex;
     justify-content: center;
 }
-
 .advantages__column {
     text-align: center;
     width: 25%;
 }
-
 .advantages__column:not(:last-child) {
     margin-right: 16px;
 }
-
 .advantages__text {
     font-size: 24px;
     line-height: 28px;
     margin-top: 44px;
 }
-
-/*------ homes-section --------*/
-
-.homes {
-    padding: 120px 0;
-    background-color: #EAF0F9;
+.advantages__icon {
+    fill: #3077C6;
+    width: 100px;
+    height: 100px;
 }
 
+.homes {
+    background-color: #EAF0F9;
+}
 .homes__title {
     text-align: center;
     margin-bottom: 106px;
 }
-
 .homes__body {
     display: flex;
     position: relative;
 }
-
 .homes__column {
     width: 25%;
     margin-right: 16px;
 }
-
 .homes__column:nth-child(4) {
     margin: 0;
 }
-
 .homes__column > img {
     display: block;
     width: 100%;
 }
-
 .homes__text {
     margin-top: 24px;
     font-size: 24px;
     line-height: 28px;
 }
-
 .home-slider {
     position: absolute;
     top: 30%;
@@ -339,25 +318,22 @@ h2 {
     transform: translate(-50%, 0%);
     box-shadow: 0 4px 4px #0000003F;
 }
-
-/*------ destinations-section --------*/
-
-.destinations {
-    padding: 120px 0;
+.arrow-icon {
+    width: 9px;
+    height: 21px;
+    stroke: #383838;
 }
 
 .destinations__title {
     text-align: center;
     margin-bottom: 104px;
 }
-
 .destinations__buttons {
     background-color: #F3F3F4;
     display: inline-block;
     border-radius: 8px;
     margin-bottom: 64px;
 }
-
 .destinations__button {
     min-width: 192px;
     font-size: 24px;
@@ -367,37 +343,29 @@ h2 {
     float: left;
     transition: .5s ease;
 }
-
 .destinations__button:not(:first-child):hover {
     background-color: #e0e0e5;
 }
-
 .destinations__button:last-child {
     padding: 17px 25px;
 }
-
 .destinations__button:first-child {
     background-color: #3077C6;
     color: #FFFFFF;
 }
-
 .destinations__button:first-child:hover {
     background-color: #1a5ca6;
 }
-
 .destinations__body {
     display: flex;
     margin-bottom: 48px;
 }
-
 .destinations__column {
     width: 25%;
 }
-
 .destinations__column:not(:last-child) {
     margin-right: 16px;
 }
-
 .destinations__column img {
     display: block;
     width: 100%;
@@ -405,11 +373,9 @@ h2 {
     transition: .5s ease;
     backface-visibility: hidden;
 }
-
 .destinations__column img:hover {
     opacity: 0.3;
 }
-
 .reservation-button {
     position: absolute;
     top: 50%;
@@ -422,54 +388,135 @@ h2 {
     font-size: 18px;
     transition: .5s ease;
 }
-
 .reservation-button:hover {
     background-color: #3077C6;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
 }
-
 .destinations__text {
     font-size: 24px;
     margin-top: 24px;
 }
-
 .destinations-slider {
     transform: rotate(90deg);
     box-shadow: 4px 0 4px #0000003F;
 }
 
-/*------ footer --------*/
-
 .footer {
-    padding: 120px 0;
     background-color: #10367C;
 }
-
+.footer__triphouse-logo {
+    display: none;
+    fill: #FFFFFF;
+    width: 98px;
+    height: 19px;
+    margin: 0 auto;
+}
 .footer__body {
     display: flex;
     margin-bottom: 64px;
 }
-
 .footer__column {
     width: 33.3%;
 }
-
 .footer__column:not(:last-child) {
     margin-right: 16px;
 }
-
 .footer__column a {
     color:#FFFFFF;
     font-size: 20px;
     text-decoration: none;
 }
-
 .footer__column li:not(:last-child) {
     margin-bottom: 24px;
 }
-
 .copyright {
     color: #FFFFFF;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    ._bounding-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .advantages__header {
+        margin-bottom: 40px;
+    }
+    .advantages__orange-line {
+        display: none;
+    }
+    .advantages__body {
+        flex-wrap: wrap;
+    }
+    .advantages__column {
+        margin-top: 32px;
+        width: 40%;
+    }
+    .advantages__column:not(:last-child) {
+        margin-right: 32px;
+    }
+    .advantages__column:nth-child(even) {
+        margin-right: 0;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    ._bounding-container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .advantages__header {
+        margin-bottom: 32px;
+    }
+    .advantages__title {
+        font-size: 28px;
+        line-height: 33px;
+    }
+    .advantages__column {
+        width: 100%;
+    }
+    .advantages__column:first-child {
+        margin-top: 0;
+    }
+    .advantages__column:nth-child(odd) {
+        margin-right: 0;
+    }
+    .advantages__text {
+        margin-top: 16px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+
+    .footer__triphouse-logo {
+        display: block;
+        margin-bottom: 40px;
+    }
+    .footer__body{
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+    .footer__column {
+        width: auto;
+    }
+    .footer__column li:first-child {
+        margin-bottom: 0;
+    }
+    .footer__column li:not(:first-child) {
+        display: none;
+    }
+    .footer__column a {
+        font-size: 15px;
+        line-height: 18px;
+        text-decoration: underline;
+    }
+    .copyright {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
