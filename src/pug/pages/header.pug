@@ -1,0 +1,33 @@
+.header__blackout-container
+    .header-top__container
+        .header__body
+            .header__logo
+                a(href="#")
+                    svg.triphouse-logo
+                        use(href="./img/sprite.svg#triphouse-logo")
+            nav.header__menu.menu
+                .menu__text
+                    a.menu__link(href="#") Stays
+                    a.menu__link(href="#") Attractions
+                .menu__icons
+                    a(href="#")
+                        svg.theme-icon
+                            use(href="./img/sprite.svg#theme-icon")
+                    a(href="#")
+                        svg.account-icon
+                            use(href="./img/sprite.svg#account-icon")
+        h1.top__title Discover stays <br> to live, work or just relax
+        form.top__form
+            .city-field
+                input#city-input.city-input(type="text" required)
+                label.city-label(for="city-input") Your destination or hotel name
+            .button-container
+                .calendar(tabindex="0")
+                    p.calendar-label Check-in — Check-out
+                .adults(tabindex="0") 2 Adults — 0 Children — 1 Room
+                button.search-button(type="submit") Search
+        .top__apps
+            a(href="https://play.google.com" target="_blank")
+                img(src="./img/top/google-play.png" alt="Google Play")
+            a(href="https://www.apple.com/app-store" target="_blank")
+                img(src="./img/top/app-store.png" alt="App Store")
