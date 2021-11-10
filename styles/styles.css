@@ -628,6 +628,10 @@ h2::after {
 }
 
 @media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
     ._bounding-container {
         padding: 80px 32px;
     }
@@ -725,6 +729,7 @@ h2::after {
 
     .sign-up {
         padding: 24px 0;
+        order: 1;
     }
     .sign-up__body {
         padding: 0 32px 0 90px;
