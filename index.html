@@ -105,25 +105,34 @@
                         <p class="homes__text -gray-text">Saint Petersburg, Russia</p>
                     </div>
                     <div class="homes__column col-3">
-                        <img src="img/homes/spain-home.png" alt="House in Spain">
+                        <div class="_image-container">
+                            <button class="vertical-slider-sm slider remove-md">
+                                <svg class="arrow-icon">
+                                    <use href="./img/sprite.svg#arrow-icon"></use>
+                                </svg>
+                            </button>
+                            <img src="img/homes/spain-home.png" alt="House in Spain">
+                        </div>
                         <p class="homes__text -blue-text">Apartment Sunshine</p>
                         <p class="homes__text -gray-text">Santa  Cruz de Tenerife, Spain</p>
                     </div>
-                    <div class="homes__column col-3 invisible">
+                    <div class="homes__column col-3 remove-sm">
                         <img src="img/homes/slowakia-home.png" alt="House in Slowakia">
                         <p class="homes__text -blue-text">Villa Kunerad</p>
                         <p class="homes__text -gray-text">Vysokie Tatry, Slowakia</p>
                     </div>
-                    <div class="homes__column col-3 invisible">
-                        <img src="img/homes/germany-home.png" alt="House in Germany">
+                    <div class="homes__column col-3 remove-sm">
+                        <div class="_image-container">
+                            <button class="vertical-slider slider">
+                                <svg class="arrow-icon">
+                                    <use href="./img/sprite.svg#arrow-icon"></use>
+                                </svg>
+                            </button>
+                            <img src="img/homes/germany-home.png" alt="House in Germany">
+                        </div>
                         <p class="homes__text -blue-text">Hostel Friendship</p>
                         <p class="homes__text -gray-text">Berlin, Germany</p>
                     </div>
-                    <button class="home-slider slider">
-                        <svg class="arrow-icon">
-                            <use href="./img/sprite.svg#arrow-icon"></use>
-                        </svg>
-                    </button>
                 </div>
             </div>
         </section>
@@ -133,7 +142,7 @@
                 <div class="destinations__buttons">
                     <button class="destinations__button">Regions</button>
                     <button class="destinations__button">Cities</button>
-                    <button class="destinations__button">Places of interest</button>
+                    <button class="destinations__button">Places<span class="remove-sm"> of interest</span></button>
                 </div>
                 <div class="destinations__body">
                     <div class="destinations__column col-3">
@@ -151,10 +160,15 @@
                             <div class="-blackout">
                                 <button class="reservation-button -blue-text">Book now</button>
                             </div>
+                            <button class="vertical-slider slider remove-md">
+                                <svg class="arrow-icon">
+                                    <use href="./img/sprite.svg#arrow-icon"></use>
+                                </svg>
+                            </button>
                         </div>
                         <p class="destinations__text -blue-text">Spain</p>
                     </div>
-                    <div class="destinations__column col-3">
+                    <div class="destinations__column col-3 remove-xs">
                         <div class="_image-container">
                             <img src="img/destinations/norway.png" alt="Norway picture">
                             <div class="-blackout">
@@ -163,7 +177,7 @@
                         </div>
                         <p class="destinations__text -blue-text">Norway</p>
                     </div>
-                    <div class="destinations__column col-3">
+                    <div class="destinations__column col-3 remove-xs">
                         <div class="_image-container">
                             <img src="img/destinations/island.png" alt="Island picture">
                             <div class="-blackout">
@@ -174,7 +188,7 @@
                     </div>
                 </div>
                 <div class="_slider-container">
-                    <button class="destinations-slider slider">
+                    <button class="destinations-slider slider remove-xs">
                         <svg class="arrow-icon">
                             <use href="./img/sprite.svg#arrow-icon"></use>
                         </svg>
@@ -189,10 +203,18 @@
                         <use href="./img/sprite.svg#sign-up-icon"></use>
                     </svg>
                 </div>
-                <div class="sign-up__items">
-                    <p class="sign-up__text">Sign up and get 20% off your first booking</p>
+                <div class="sign-up__logo-container sign-up__sm">
+                    <a href="#">
+                        <svg class="sign-up__triphouse-logo">
+                            <use href="./img/sprite.svg#triphouse-logo"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="sign-up__items sign-up__sm">
+                    <p class="sign-up__text">Sign up<span class="sing-up__invisible remove-md"> in the app</span> and get 20% off your first booking</p>
                     <button class="sign-up__button -blue-text">Sign up</button>
                 </div>
+                <a class="sign-up__install" href="#">Install</a>
                 <svg class="close-button">
                     <use href="./img/sprite.svg#close-icon"></use>
                 </svg>
