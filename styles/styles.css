@@ -86,6 +86,9 @@ h2::after {
 .slider:hover {
     background-color: #e0e0e5;
 }
+.remove-md {
+    display: none;
+}
 
 /*------ modifiers --------*/
 
@@ -335,23 +338,21 @@ h2::after {
 .homes__column:nth-child(4) {
     margin: 0;
 }
-.homes__column > img {
+.homes__column img {
     display: block;
     width: 100%;
-}
-.last-img {
-    position: relative;
 }
 .homes__text {
     margin-top: 24px;
     font-size: 24px;
     line-height: 28px;
 }
-.home-slider {
+.vertical-slider-sm,
+.vertical-slider {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 100%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     box-shadow: 0 4px 4px #0000003F;
 }
 .arrow-icon {
@@ -455,6 +456,9 @@ h2::after {
     height: 44px;
     margin: 21px 18px;
 }
+.sign-up__logo-container {
+    display: none;
+}
 .sign-up__text {
     font-weight: 500;
     font-size: 24px;
@@ -477,6 +481,9 @@ h2::after {
 }
 .sign-up__button:active {
     background-color: #1a5ca6;
+}
+.sign-up__install {
+    display: none;
 }
 .close-button{
     position: absolute;
@@ -621,20 +628,20 @@ h2::after {
 }
 
 @media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
     ._bounding-container {
         padding: 80px 32px;
     }
-
-    h2::after {
-        display: none;
-    }
-
-    .advantages__orange-line {
-        display: none;
-    }
-    .advantages__header{
+    h2 {
         margin-bottom: 36px;
     }
+    .remove-sm,h2::after {
+        display: none;
+    }
+
     .advantages__body{
         flex-wrap: wrap;
     }
@@ -677,12 +684,96 @@ h2::after {
         font-size: 18px;
         margin-top: 18px;
     }
-    .invisible {
+    .vertical-slider {
+        transform: translate(-60%, -50%);
+        top: 50%;
+    }
+    .vertical-slider-sm {
+        display: flex;
+        transform: translate(-60%, -50%);
+    }
+
+    .destinations__buttons {
+        display: flex;
+        background-color: #FFFFFF;
+        margin-bottom: 0;
+    }
+    .destinations__button {
+        min-width: auto;
+        width: calc(33% - 8px);
+        margin-top: 32px;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    .destinations__button:not(:first-child) {
+        margin-left: 16px;
+        border: 1px solid #F3F3F4;
+        padding: 5px;
+    }
+    .destinations__body {
+        flex-wrap: wrap;
+    }
+    .destinations__column {
+        width: calc(50% - 16px);
+        margin-top: 32px;
+    }
+    .destinations__column:not(:last-child) {
+        margin-right: 32px;
+    }
+    .destinations__column:nth-child(even) {
+        margin-right: 0;
+    }
+    .destinations__text {
+        margin-top: 15px;
+    }
+
+    .sign-up {
+        padding: 24px 0;
+        order: 1;
+    }
+    .sign-up__body {
+        padding: 0 32px 0 90px;
+    }
+    .sign-up__sm {
+        margin-right: 32px;
+    }
+    .sign-up__circle {
         display: none;
     }
-    .home-slider {
-        transform: translateX(-60%);
-        top: 40%;
+    .sign-up__logo-container{
+        display: block;
+        background-color: #3077C6;
+        padding: 24px 10px;
+        border-radius: 4px;
+    }
+    .sign-up__triphouse-logo {
+        width: 70px;
+        height: 20px;
+        fill: #FFFFFF;
+    }
+    .sign-up__text {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+    .sing-up__invisible {
+        display: inline;
+    }
+    .sign-up__button{
+        display: none;
+    }
+    .sign-up__install {
+        display: block;
+        text-decoration: none;
+        color: #3077C6;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 16px;
+    }
+    .close-button {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        margin: 0 0 0 32px;
     }
 
     .footer__triphouse-logo {
@@ -722,14 +813,15 @@ h2::after {
     ._bounding-container {
         padding: 40px 16px;
     }
-
-    .advantages__header {
-        margin-bottom: 32px;
-    }
-    .advantages__title {
+    h2 {
         font-size: 28px;
         line-height: 33px;
+        margin-bottom: 32px;
     }
+    .remove-xs {
+        display: none;
+    }
+
     .advantages__column:first-child {
         margin-top: 0;
     }
@@ -764,13 +856,67 @@ h2::after {
         line-height: 14px;
         margin-top: 8px;
     }
-    .home-slider {
+    .vertical-slider,
+    .vertical-slider-sm {
+        display: flex;
         width: 28px;
         height: 28px;
+        top: 50%;
     }
     .arrow-icon {
         width: 7px;
         height: 16px;
+    }
+
+    .destinations__button {
+        margin-top: 0;
+        font-size: 19px;
+        line-height: 22px;
+    }
+    .destinations__body {
+        margin-bottom: 0;
+    }
+    .destinations__column {
+        width: calc(50% - 8px);
+        margin-top: 24px;
+    }
+    .destinations__column:not(:last-child) {
+        margin-right: 16px;
+    }
+    .destinations__column:nth-child(even) {
+        margin-right: 0;
+    }
+    .destinations__text {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 8px;
+    }
+    .sign-up__body {
+        padding: 0 16px 0 48px;
+    }
+    .sign-up__sm {
+        margin-right: 16px;
+    }
+    .close-button {
+        width: 16px;
+        height: 16px;
+        margin-left: 16px;
+    }
+    .sign-up__logo-container{
+        padding: 24px 3px;
+    }
+    .sign-up__triphouse-logo {
+        width: 53px;
+        height: 10px;
+    }
+    .sign-up__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .sign-up__install {
+        font-size: 14px;
+        line-height: 16px;
     }
 
     .footer__body{
