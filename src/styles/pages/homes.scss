@@ -1,0 +1,37 @@
+.homes__body {
+  display: flex;
+  position: relative;
+}
+
+.homes__column {
+  margin-right: 16px;
+  @extend %fs-big;
+
+  &:nth-child(4) {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  p {
+    margin-top: 24px;
+  }
+}
+
+
+.vertical-slider-sm,
+.vertical-slider {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 4px #0000003F;
+}
+.arrow-icon {
+  width: 9px;
+  height: 21px;
+  stroke: #383838;
+}

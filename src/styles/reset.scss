@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border:none;
+}
+li {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+input {
+  float: left;
+}
+input:focus {outline: 0;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
