@@ -4,7 +4,7 @@
     --columns-count: 12;
 }
 
-html, body {
+html, body, input, select, textarea, button {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
@@ -24,7 +24,15 @@ button {
     background-color: transparent;
     cursor: pointer;
 }
+input {
+    float: left;
+}
 input:focus {outline: 0;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /*------ main settings ------------*/
 
@@ -40,6 +48,11 @@ input:focus {outline: 0;}
 .col-10 {width: calc(100% / var(--columns-count) * 10);}
 .col-11 {width: calc(100% / var(--columns-count) * 11);}
 .col-12 {width: calc(100% / var(--columns-count) * 12);}
+
+::placeholder {
+    font-weight: 500;
+    color: #383838;
+}
 
 ._bounding-container {
     max-width: 1232px;
@@ -81,10 +94,13 @@ h2::after {
     height: 40px;
     background-color: #F3F3F4;
     border-radius: 50%;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 .slider:hover {
     background-color: #e0e0e5;
+}
+.slider:active {
+    background-color: #d0d0d5;
 }
 .remove-md {
     display: none;
@@ -106,6 +122,9 @@ h2::after {
 }
 .-light-blue-bc {
     background-color: #EAF0F9;
+}
+.-light-black-bc {
+    background-color: #333333;
 }
 .-blackout {
     width: 100%;
@@ -146,6 +165,13 @@ h2::after {
     fill: #3077C6;
     width: 205px;
     height: 40px;
+    transition: 0.2s ease;
+}
+.triphouse-logo:hover {
+    fill: #326cb0;
+}
+.triphouse-logo:active {
+    fill: #1a5ca6;
 }
 .header__menu {
     display: flex;
@@ -160,6 +186,13 @@ h2::after {
     color: #FFFFFF;
     text-decoration: none;
     margin-right: 24px;
+    transition: 0.2s ease;
+}
+.menu__text a:hover {
+    color:rgba(245, 189, 65, 1);
+}
+.menu__text a:active {
+    color: rgb(211, 149, 12);
 }
 .menu__link {
     position: relative;
@@ -171,7 +204,7 @@ h2::after {
     bottom: -32%;
     content: '';
     width: 85%;
-    height: 4px;
+    height: 2.5px;
     background-color: #F5BD41;
 }
 .menu__link:hover:after {
@@ -188,11 +221,28 @@ h2::after {
     fill: #FFFFFF;
     width: 30px;
     height: 30px;
+    transition: .2s ease;
+}
+.theme-icon:hover {
+    fill:rgba(245, 189, 65, 1);
+}
+.theme-icon:active {
+    fill: rgb(225, 159, 13);
 }
 .account-icon {
     fill: #FFFFFF;
     width: 40px;
     height: 40px;
+    transition: .2s ease;
+}
+.account-icon:hover {
+    fill:rgba(245, 189, 65, 1);
+}
+.account-icon:active {
+    fill: rgb(225, 159, 13);
+}
+.sandwich-icon {
+    display: none;
 }
 /*------------------------------*/
 
@@ -214,13 +264,13 @@ h2::after {
     max-height: 64px;
     position: relative;
     background-color: #FFFFFF;
-    border: 3px solid #F3F3F4;;
+    border: 3px solid #F3F3F4;
     border-radius: 8px;
     height: 64px;
 }
 .city-label {
     position: absolute;
-    bottom: 50%;
+    bottom: 46.5%;
     left: 2%;
     transform: translate(0, 50%);
     font-size: 18px;
@@ -239,21 +289,14 @@ h2::after {
 }
 .city-input {
     padding: 19px 24px 19px 24px;
-    width: 41.3%;
+    width: 30%;
     height: 64px;
     border-radius: 8px;
     font-size: 18px;
-    border: 3px solid rgba(245, 189, 65, 0);
     position: absolute;
     top: -5%;
     left: -0.2%;
     transition: .2s ease;
-}
-.city-input:hover {
-    border: 3px solid #dedee1;
-}
-.city-input:focus {
-    border: 3px solid rgba(245, 189, 65, 1);
 }
 .button-container {
     display: flex;
@@ -263,7 +306,7 @@ h2::after {
     top: 0;
     right: 0;
 }
-.calendar, .adults {
+.calendar, .criterias {
     color: #383838;
     padding: 21px 24px;
     border: 3px solid rgba(245, 189, 65, 0);
@@ -271,14 +314,14 @@ h2::after {
     cursor: pointer;
     transition: .2s ease;
 }
-.calendar:hover, .adults:hover {
+.calendar:hover, .criterias:hover {
     border: 3px solid #dedee1;
 }
-.calendar:focus, .adults:focus {
+.calendar:focus, .criterias:focus {
     border: 3px solid rgba(245, 189, 65, 100);
 }
 .search-button {
-    padding: 15px 54px;
+    padding: 15px 55px;
     background-color: #3077C6;
     color: #FFFFFF;
     border: 3px solid rgba(255, 255, 255, 0);
@@ -293,6 +336,9 @@ h2::after {
 .search-button:active {
     background-color: #1a5ca6;
     border: 3px solid #FFFFFF;
+}
+.top__form-sm {
+    display: none;
 }
 .top__apps {
     width: 271px;
@@ -366,28 +412,31 @@ h2::after {
     background-color: #F3F3F4;
     display: inline-block;
     border-radius: 8px;
-    margin-bottom: 64px;
+    margin-bottom: 62px;
 }
 .destinations__button {
     min-width: 192px;
     font-size: 24px;
     line-height: 28px;
-    padding: 17px 52px;
+    padding: 18px 52px;
     border-radius: 8px;
     float: left;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 .destinations__button:not(:first-child):hover {
     background-color: #e0e0e5;
 }
 .destinations__button:last-child {
-    padding: 17px 25px;
+    padding: 18px 25px;
 }
 .destinations__button:first-child {
     background-color: #3077C6;
     color: #FFFFFF;
 }
 .destinations__button:first-child:hover {
+    background-color: #4387d7;
+}
+.destinations__button:first-child:active {
     background-color: #1a5ca6;
 }
 .destinations__body {
@@ -417,12 +466,15 @@ h2::after {
     border: 1px solid #3077C6;
     border-radius: 8px;
     font-size: 18px;
-    transition: .5s ease;
+    transition: .2s ease;
 }
 .reservation-button:hover {
     background-color: #3077C6;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
+}
+.reservation-button:active {
+    background-color: #1a5ca6;
 }
 .destinations__text {
     font-size: 24px;
@@ -534,7 +586,7 @@ h2::after {
 .column__items {
     font-size: 18px;
     line-height: 21px;
-    padding: 24px;
+    padding: 25px;
 }
 .column__items:not(:last-child) {
     margin-bottom: 24px;
@@ -543,6 +595,9 @@ h2::after {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
+}
+.hotel-location {
+    margin-right: 16px;
 }
 .hotel-location p:not(:last-child) {
     margin-bottom: 16px;
@@ -560,14 +615,24 @@ h2::after {
     padding: 4px 11px;
     border-radius: 8px;
     margin-bottom: 8px;
+    transition: .2s ease;
+}
+.review-rating:hover {
+    background-color: #18559a;
+}
+.review-rating:active {
+    background-color: #082a69;
+
 }
 .review-count {
+    text-align: right;
     font-size: 14px;
     line-height: 16px;
 }
 .user {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 19px;
+    padding: 5px;
 }
 .user-icon {
     width: 53px;
@@ -578,6 +643,11 @@ h2::after {
 .user-location {
     display: flex;
     align-items: center;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .user-info p:not(:last-child) {
     margin-bottom: 8px;
@@ -627,7 +697,47 @@ h2::after {
     font-size: 14px;
 }
 
+
+@media (max-width: 1103px) {
+    .hotel-info {
+        min-height: 95px;
+    }
+
+    .city-input {
+        width: 100%;
+    }
+    .button-container {
+        width: 100%;
+        justify-content: space-between;
+        top: 80px;
+        border-radius: 8px;
+    }
+    .border_container {
+        margin-top: 16px;
+        background-color: #FFFFFF;
+        border: 3px solid #F3F3F4;
+        height: 64px;
+        border-radius: 8px;
+    }
+    .calendar {
+        width: 35%;
+    }
+    .criterias {
+        width: 45%;
+        text-align: center;
+    }
+    .search-button {
+        width: 20%;
+        padding: 15px 0;
+    }
+}
+
+
 @media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
     ._bounding-container {
         padding: 80px 32px;
     }
@@ -636,6 +746,122 @@ h2::after {
     }
     .remove-sm,h2::after {
         display: none;
+    }
+
+    .header-top__container {
+        padding: 16px 16px 40px 16px;
+    }
+    .header__body{
+        margin-bottom: 52px;
+    }
+    .triphouse-logo {
+        width: 122px;
+        height: 24px;
+    }
+    .menu__text {
+        display: none;
+    }
+    .menu__icons a {
+        display: flex;
+        margin-left: 16px;
+    }
+    .sandwich-icon {
+        display: block;
+        width: 24px;
+        height: 16px;
+        fill:#FFFFFF;
+        margin-left: 16px;
+    }
+    .theme-icon {
+        width: 16px;
+        height: 16px;
+    }
+    .account-icon {
+        width: 24px;
+        height: 24px;
+    }
+    .top__title {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 32px;
+    }
+    .top__form-sm {
+        display: block;
+        background-color: #F5BD41;
+        color: #383838;
+        padding: 8px;
+        margin-bottom: 32px;
+    }
+    .city-field-sm {
+        display: flex;
+        align-items: center;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        padding: 15px 12px;
+        margin-bottom: 8px;
+    }
+    .search-icon {
+        fill: #BFBFBF;
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+    .city-input-sm {
+        width: 100%;
+        padding-top: 3px;
+    }
+    .calendar-sm {
+        display: flex;
+        margin-bottom: 8px;
+    }
+    .calendar-items-sm {
+        width: calc(50% - 4px);
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        padding: 6px 8px;
+    }
+    .calendar-items-sm:not(:last-child) {
+        margin-right: 8px;
+    }
+    .form-label-sm {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 4px;
+    }
+    .form-input-sm {
+        width: 100%;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    .criterias-sm {
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        padding: 6px 8px;
+        margin-bottom: 8px;
+    }
+    .criterias-items {
+        width: 33.3%;
+    }
+    .criterias-items:not(:first-child) {
+        border-left: 1px solid #BFBFBF;
+        padding-left: 8px;
+    }
+    .search-button-sm {
+        background-color: #3077C6;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius: 4px;
+        padding: 14px;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 22px;
+        transition: .2s e;
+    }
+    .search-button-sm:active {
+        background-color: #1a5ca6;
     }
 
     .advantages__body{
@@ -722,9 +948,15 @@ h2::after {
     .destinations__text {
         margin-top: 15px;
     }
+    .reservation-button {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
 
     .sign-up {
+        background-color: #FFFFFF;
         padding: 24px 0;
+        order: 1;
     }
     .sign-up__body {
         padding: 0 32px 0 90px;
@@ -771,6 +1003,37 @@ h2::after {
         margin: 0 0 0 32px;
     }
 
+    .reviews {
+        background-color: #EAF0F9;
+    }
+    .reviews__column {
+        width: calc(50% - 16px);
+    }
+    .reviews__column:not(:last-child) {
+        margin-right: 0px;
+    }
+    .reviews__column:not(:first-child) {
+        margin-left: 32px;
+    }
+    .review__nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+    }
+    .review__nav_body {
+        display: flex;
+    }
+    .review__nav_ellipse {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 1px solid #333333;
+    }
+    .review__nav_ellipse:not(:last-child) {
+        margin-right: 8px;
+    }
+
+
     .footer__triphouse-logo {
         display: block;
         margin-bottom: 40px;
@@ -815,6 +1078,9 @@ h2::after {
     }
     .remove-xs {
         display: none;
+    }
+    .visible {
+        display: block;
     }
 
     .advantages__column:first-child {
@@ -886,6 +1152,39 @@ h2::after {
         line-height: 14px;
         margin-top: 8px;
     }
+
+    .reviews__column {
+        width: 100%;
+    }
+    .reviews__column:not(:first-child) {
+        margin-left: 16px;
+    }
+    .column__items {
+        font-size: 15px;
+        line-height: 17px;
+        padding: 12px 0 0 0;
+    }
+    .hotel-info {
+        min-height: auto;
+        margin-bottom: 12px;
+    }
+    .hotel-location p:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    .review-rating {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 4px;
+    }
+    .review-count {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .user {
+        margin-bottom: 16px;
+    }
+
+
     .sign-up__body {
         padding: 0 16px 0 48px;
     }

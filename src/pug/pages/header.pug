@@ -16,16 +16,41 @@
                     a(href="#")
                         svg.account-icon
                             use(href="./img/sprite.svg#account-icon")
+                    svg.sandwich-icon
+                        use(href="./img/sprite.svg#menu-icon")
         h1.top__title Discover stays <br> to live, work or just relax
-        form.top__form
+        form.top__form.remove-sm
             .city-field
                 input#city-input.city-input(type="text" required)
                 label.city-label(for="city-input") Your destination or hotel name
-            .button-container
-                .calendar(tabindex="0")
-                    p.calendar-label Check-in — Check-out
-                .adults(tabindex="0") 2 Adults — 0 Children — 1 Room
-                button.search-button(type="submit") Search
+            .border_container
+                .button-container
+                    .calendar(tabindex="0") Check-in — Check-out
+                    .criterias(tabindex="0") 2 Adults — 0 Children — 1 Room
+                    button.search-button(type="submit") Search
+        form.top__form-sm
+            .city-field-sm
+                svg.search-icon
+                    use(href="./img/sprite.svg#search-icon")
+                input.city-input-sm(type="text" placeholder="Your destination or hotel name" required)
+            .calendar-sm
+                .calendar-items-sm
+                    label.form-label-sm Check-in date
+                    input.form-input-sm(type="text")
+                .calendar-items-sm
+                    label.form-label-sm check-out date
+                    input.form-input-sm(type="text")
+            .criterias-sm
+                .criterias-items
+                    label.form-label-sm Adults
+                    input.form-input-sm(type="number")
+                .criterias-items
+                    label.form-label-sm Children
+                    input.form-input-sm(type="number")
+                .criterias-items
+                    label.form-label-sm Rooms
+                    input.form-input-sm(type="number")
+            .search-button-sm Search
         .top__apps
             a(href="https://play.google.com" target="_blank")
                 img(src="./img/top/google-play.png" alt="Google Play")
