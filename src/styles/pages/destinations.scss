@@ -1,0 +1,83 @@
+.destinations__buttons {
+  display: inline-block;
+  background-color: $lightGray;
+  border-radius: 8px;
+  margin-bottom: 62px;
+}
+.destinations__button {
+  min-width: 192px;
+  @extend %fs-big;
+  padding: 18px 52px;
+  border-radius: 8px;
+  float: left;
+  transition: .2s ease;
+  &:first-child {
+    background-color: $blue;
+    color: $white;
+  }
+  &:first-child:hover {
+    background-color: $hoverBlue;
+  }
+  &:first-child:active {
+    background-color: $activeBlue;
+  }
+  &:last-child {
+    padding: 18px 25px;
+  }
+  &:not(:first-child):hover {
+    background-color: $hoverGray;
+  }
+}
+
+.destinations__body {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.destinations__column {
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+}
+
+.reservation-button {
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid $blue;
+  border-radius: 8px;
+  @extend %fs-little;
+  padding: 13px 24px;
+  transition: .3s ease;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+    border: 1px solid $white;
+  }
+  &:active {
+    background-color: $activeBlue;
+  }
+}
+
+.destinations__text {
+  @extend %fs-big;
+  margin-top: 24px;
+  color: $blue;
+}
+
+.destinations-slider {
+  transform: rotate(90deg);
+  box-shadow: 4px 0 4px #0000003F;
+}

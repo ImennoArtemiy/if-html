@@ -1,46 +1,42 @@
 section.destinations
-
     ._bounding-container
-
-        h2.destinations__title The best destinations
-
+        h2 The best destinations
         .destinations__buttons
-            button.destinations__buttons Regions
-            button.destinations__buttons Cities
-            button.destinations__buttons Places of interest
-
+            button.destinations__button Regions
+            button.destinations__button Cities
+            button.destinations__button Places of interest
         .destinations__body
 
-            .destinations__column.col-3
+            .destinations__column
                 ._image-container
                     img(src="img/destinations/maldives.png" alt="Maldives picture")
-                    .-blackout
-                        button.reservation-button.-blue-text Book now
-                p.destinations__text.-blue-text Maldives
+                    ._blackout-container
+                        button.reservation-button Book now
+                p.destinations__text Maldives
 
-            .destinations__column.col-3
+            .destinations__column
                 ._image-container
                     img(src="img/destinations/spain.png" alt="Spain picture")
-                    .-blackout
-                        button.reservation-button.-blue-text Book now
+                    ._blackout-container
+                        button.reservation-button Book now
                     button.vertical-slider.slider.remove-md
-                    svg.arrow-icon
-                        use(href="./img/sprite.svg#arrow-icon")
-                p.destinations__text.-blue-text Spain
+                        svg.arrow-icon
+                            use(href="./img/sprite.svg#arrow-icon")
+                p.destinations__text Spain
 
-            .destinations__column.col-3
+            .destinations__column
                 ._image-container
                     img(src="img/destinations/norway.png" alt="Norway picture")
-                    .-blackout
-                        button.reservation-button.-blue-text Book now
-                p.destinations__text.-blue-text Norway
+                    ._blackout-container
+                        button.reservation-button Book now
+                p.destinations__text Norway
 
-            .destinations__column.col-3
+            .destinations__column
                 ._image-container
                     img(src="img/destinations/island.png" alt="Island picture")
-                    .-blackout
-                        button.reservation-button.-blue-text Book now
-                p.destinations__text.-blue-text Island
+                    ._blackout-container
+                        button.reservation-button Book now
+                p.destinations__text Island
 
         ._slider-container
             button.destinations-slider.slider

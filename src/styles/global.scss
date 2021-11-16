@@ -1,3 +1,24 @@
+// variables-color
+
+$white: #FFFFFF;
+
+$darkBlue: #10367C;
+$blue: #3077C6;
+$lightBlue: #EAF0F9;
+
+$hoverBlue: #a3bcd9;
+$activeBlue: #1a5ca6;
+
+$yellow: #F5BD41;
+
+$black: #383838;
+$gray: #BFBFBF;
+$lightGray: #F3F3F4;
+
+$hoverGray: #e0e0e5;
+$activeGray: #d0d0d5;
+
+// templates font-size
 
 %fs-little {
   font-size: 18px;
@@ -12,34 +33,14 @@
   line-height: 28px;
 }
 
-%flex-element-center {
-  display: flex;
-  justify-content: center;
-}
+// default settings
 
 html, body, input, select, textarea, button {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  color: $black;
 }
 
-::placeholder {
-  font-weight: 500;
-  color: #383838;
-}
-
-._bounding-container {
-  max-width: 1232px;
-  margin: 0 auto;
-  padding: 120px 32px;
-  box-sizing: content-box;
-}
-._image-container {
-  position: relative;
-}
-._slider-container {
-  display: flex;
-  justify-content: center;
-}
 h2 {
   position: relative;
   text-align: center;
@@ -56,9 +57,45 @@ h2 {
     width: 100px;
     height: 4px;
     margin: 0 auto;
-    background-color:#F5BD41;
+    background-color: $yellow;
   }
 }
+
+::placeholder {
+  font-weight: 500;
+  color: $black;
+}
+
+// reusable classes
+
+._bounding-container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 120px 32px;
+  box-sizing: content-box;
+}
+._image-container {
+  position: relative;
+}
+._slider-container {
+  display: flex;
+  justify-content: center;
+}
+._blackout-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s ease;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+//reusable elements
 
 .slider {
   display: flex;
@@ -66,17 +103,33 @@ h2 {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: #F3F3F4;
+  background-color: $lightGray;
   border-radius: 50%;
   transition: .2s ease;
+  &:hover {
+    background-color: $hoverGray;
+  }
+  &:active {
+    background-color: $activeGray;
+  }
 }
-.slider:hover {
-  background-color: #e0e0e5;
+.vertical-slider-sm,
+.vertical-slider {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 4px #0000003F;
 }
-.slider:active {
-  background-color: #d0d0d5;
-}
+
+
+
 .remove-md {
   display: none;
 }
+
+.vertical-slider-sm {
+
+}
+
 

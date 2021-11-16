@@ -1,17 +1,17 @@
 .advantages__body {
-  @extend %flex-element-center;
+  display: flex;
+  justify-content: center;
 }
 
 .advantages__column {
   text-align: center;
   width: 25%;
   @extend %fs-big;
-
   &:not(:last-child) {
     margin-right: 16px;
   }
   svg {
-    fill: #3077C6;
+    fill: $blue;
     width: 100px;
     height: 100px;
   }

@@ -1010,7 +1010,7 @@ h2::after {
         width: calc(50% - 16px);
     }
     .reviews__column:not(:last-child) {
-        margin-right: 0px;
+        margin-right: 0;
     }
     .reviews__column:not(:first-child) {
         margin-left: 32px;
