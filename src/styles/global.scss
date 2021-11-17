@@ -10,6 +10,7 @@ $hoverBlue: #a3bcd9;
 $activeBlue: #1a5ca6;
 
 $yellow: #F5BD41;
+$activeYellow: #DA9C12FF;
 
 $black: #383838;
 $gray: #BFBFBF;
@@ -63,6 +64,7 @@ h2 {
 
 ::placeholder {
   font-weight: 500;
+  @extend %fs-little;
   color: $black;
 }
 
@@ -95,6 +97,7 @@ h2 {
   }
 }
 
+
 //reusable elements
 
 .slider {
@@ -121,15 +124,13 @@ h2 {
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 4px #0000003F;
 }
-
-
+.arrow-icon {
+  width: 9px;
+  height: 21px;
+  stroke: $black;
+}
 
 .remove-md {
   display: none;
 }
-
-.vertical-slider-sm {
-
-}
-
 

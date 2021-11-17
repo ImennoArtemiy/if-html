@@ -1,0 +1,37 @@
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+}
+.footer__triphouse-logo {
+  display: none;
+  fill: $white;
+  width: 98px;
+  height: 19px;
+  margin: 0 auto;
+}
+
+.footer__body {
+  display: flex;
+  margin-bottom: 64px;
+
+  .footer__column {
+    width: 33.3%;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    a {
+      color: $white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.copyright {
+  font-size: 14px;
+}

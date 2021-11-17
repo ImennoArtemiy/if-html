@@ -1,0 +1,109 @@
+h1 {
+  color: $white;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 59px;
+  margin-bottom: 145px;
+}
+.top__form {
+  position: relative;
+  border-radius: 8px;
+  @extend %fs-little;
+  margin-bottom: 120px;
+
+  .city-field {
+    position: relative;
+    background-color: $white;
+    height: 64px;
+    border: 3px solid $lightGray;
+    border-radius: 8px;
+    input {
+      position: absolute;
+      top: -5%;
+      left: -0.2%;
+      width: 30%;
+      height: 64px;
+      border-radius: 8px;
+      transition: .2s ease;
+      padding: 19px 24px 19px 24px;
+    }
+    label {
+      position: absolute;
+      bottom: 46.5%;
+      left: 2%;
+      transform: translate(0, 50%);
+      color: $black;
+      transition: .5s ease;
+    }
+    input:focus + label,
+    input:valid + label {
+      position: absolute;
+      top: -85%;
+      left: 2%;
+      transform: none;
+      color: $white;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-height: 64px;
+
+    .calendar, .criterias {
+      color: $black;
+      padding: 21px 24px;
+      border: 3px solid rgba(0, 0, 0, 0);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: .2s ease;
+      &:hover {
+        border: 3px solid $hoverGray;
+      }
+      &:focus {
+        border: 3px solid $yellow;
+      }
+    }
+
+    button {
+      padding: 15px 55px;
+      background-color: $blue;
+      color: $white;
+      border: 3px solid rgba(0, 0, 0, 0);
+      border-radius: 8px;
+      @extend %fs-big;
+      transition: .2s ease;
+      &:hover {
+        background-color: #4387d7;
+      }
+      &:active {
+        background-color: $activeBlue;
+        border: 3px solid $white;
+      }
+    }
+  }
+}
+
+.top__apps {
+  width: 271px;
+  height: 40px;
+  margin: 0 auto;
+  a {
+    display: block;
+    float: left;
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+
+
+
+
+.top__form-sm {
+  display: none;
+}
